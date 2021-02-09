@@ -20,3 +20,11 @@ find / -name log -exec rm {} \
 cat test.log | grep "关键字" -C 10
 ```
 
+### netstat
+
+#### 1.查看运行的pid
+
+```sh
+netstat -tunlp
+```
+
