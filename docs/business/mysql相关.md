@@ -60,4 +60,11 @@ mysqlbinlog常用参数：
 
 
 
+### 修改视图定义者
+
+```sh
+# 查询出定义者为 prod_cap_root
+select concat("alter DEFINER=`root`@`%` SQL SECURITY DEFINER VIEW `",TABLE_SCHEMA,"`.",TABLE_NAME," as ",VIEW_DEFINITION,";") from information_schema.VIEWS where DEFINER = 'prod_cap_root@%';
+# 执行 查询的sql
+```
 
