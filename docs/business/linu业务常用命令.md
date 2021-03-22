@@ -28,3 +28,11 @@ cat test.log | grep "关键字" -C 10
 netstat -tunlp
 ```
 
+### du
+
+#### 1.查看当前文件夹大小
+
+```sh
+du -ah --max-depth=1
+```
+
